@@ -12,7 +12,7 @@ const LandingProcessBlock = ({ isDesktop }: IProps) => {
       py={100}
     >
       <Stack align='center'>
-        <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1}>
+        <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1} align='center'>
           Из каких этапов состоит процесс стоительства?
         </Text>
 

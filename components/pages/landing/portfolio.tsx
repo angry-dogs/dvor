@@ -15,7 +15,7 @@ const LandingPortfolioBlock = ({ isDesktop }: IProps) => {
         id='portfolio'
       >
         <Stack align='center'>
-          <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1}>
+          <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1} align='center'>
             Наши работы
           </Text>
         </Stack>

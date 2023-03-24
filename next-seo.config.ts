@@ -1,9 +1,9 @@
 const BaseUrl = 'https://kedrovy-dvor.com';
 
 export const SEO = {
-  titleTemplate: '%s | Кедровый двор',
-  defaultTitle: 'Кедровый двор',
-  description: 'Кедровый двор - проектирование и строительство загородных домов под ключ',
+  titleTemplate: '%s | Строительная компания «Кедровый двор»',
+  defaultTitle: 'Строительная компания «Кедровый двор»',
+  description: 'Проектирование и строительство загородных домов под ключ в Красноярском крае, России и странах СНГ',
   canonical: BaseUrl,
   additionalMetaTags: [
     {
@@ -17,20 +17,20 @@ export const SEO = {
     { name: 'theme-color', content: '#000000' },
   ],
   openGraph: {
-    title: 'Кедровый двор',
-    site_name: 'Кедровый двор',
+    title: 'Строительная компания «Кедровый двор»',
+    site_name: 'Строительная компания «Кедровый двор»',
     type: 'website',
     locale: 'ru_RU',
-    description: 'Кедровый двор - проектирование и строительство загородных домов под ключ',
+    description: 'Проектирование и строительство загородных домов под ключ в Красноярском крае, России и странах СНГ',
     url: BaseUrl,
-    // images: [
-    //   {
-    //     url: 'https://s3.eu-central-1.amazonaws.com/kedrovy-dvor.com/favicons/logo.png',
-    //     alt: 'Кедровый двор',
-    //     width: 1200,
-    //     height: 630,
-    //   },
-    // ],
+    images: [
+      {
+        url: 'https://kedrovy-dvor.com/img/bg-1.jpg',
+        alt: 'Строительная компания «Кедровый двор»',
+        width: 1200,
+        height: 800,
+      },
+    ],
   },
   additionalLinkTags: [
     {

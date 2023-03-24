@@ -1,4 +1,4 @@
-import { Accordion, Box, Container, createStyles, Stack, Text } from "@mantine/core";
+import { Accordion, Anchor, Box, Container, createStyles, Stack, Text } from "@mantine/core";
 import { Plus } from "tabler-icons-react";
 
 const useStyles = createStyles(() => ({
@@ -28,7 +28,7 @@ const LandingFaqBlock = ({ isDesktop }: IProps) => {
         py={100}
       >
         <Stack align='center'>
-          <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1}>
+          <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1} align='center'>
             Популярные вопросы и ответы
           </Text>
 
@@ -81,6 +81,15 @@ const LandingFaqBlock = ({ isDesktop }: IProps) => {
               </Accordion.Panel>
             </Accordion.Item>
           </Accordion>
+
+          <Text>
+            Если у вас остались вопросы, пожалуйста, напишите нам на
+            {' '}
+            <Anchor href="mailto:kedrovy-dvor@mail.ru" color='orange'>
+              kedrovy-dvor@mail.ru
+            </Anchor>
+            .
+          </Text>
         </Stack>
       </Container>
     </Box>

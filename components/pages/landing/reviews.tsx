@@ -15,7 +15,7 @@ const LandingReviewsBlock = ({ isDesktop }: IProps) => {
         id='reviews'
       >
         <Stack align='center'>
-          <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1}>
+          <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1} align='center'>
             Отзывы наших клиентов
           </Text>
         </Stack>

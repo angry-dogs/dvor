@@ -18,30 +18,11 @@ const useStyles = createStyles((theme) => ({
       backgroundColor: '#000000',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      // filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#33044557', endColorstr='#33041e38')",
-      // backgroundImage:
-      //   "linear-gradient(250deg, rgba(130, 201, 30, 0) 50%, #062343 20%), url('/img/bg-1.jpg')",
       backgroundImage: '-webkit-linear-gradient(top, rgba(4,69,87,0.80), rgba(4,30,56,0.80)), url(/img/bg-1.jpg)',
       paddingTop: `calc(${theme.spacing.xl} * 3)`,
       paddingBottom: `calc(${theme.spacing.xl} * 3)`,
     }
   },
-
-  // image: {
-  //   [theme.fn.smallerThan('md')]: {
-  //     display: 'none',
-  //   },
-  // },
-
-  // content: {
-  //   paddingTop: `calc(${theme.spacing.xl} * 2)`,
-  //   paddingBottom: `calc(${theme.spacing.xl} * 2)`,
-  //   marginRight: `calc(${theme.spacing.xl} * 3)`,
-
-  //   [theme.fn.smallerThan('md')]: {
-  //     marginRight: 0,
-  //   },
-  // },
 
   title: {
     position: 'relative',

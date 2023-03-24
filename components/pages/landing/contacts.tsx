@@ -15,7 +15,7 @@ const LandingContactsBlock = ({ isDesktop }: IProps) => {
         id='contacts'
       >
         <Stack align='center'>
-          <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1}>
+          <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1} align='center'>
             Contacts
           </Text>
         </Stack>
