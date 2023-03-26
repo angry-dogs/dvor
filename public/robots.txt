@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kedrovy-dvor.com/sitemap.xml
+
+Host: https://kedrovy-dvor.com
