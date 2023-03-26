@@ -27,7 +27,7 @@ const LandingContactsBlock = ({ isDesktop, anchor }: IProps) => {
             <tbody>
               <tr>
                 <td>
-                  <Anchor href='tel:+79029913632' size={32} weight={600} color='black'>
+                  <Anchor href='tel:+79029913632' size={isDesktop ? 32 : 24} weight={600} color='black'>
                     +7 (902) 991 36-32
                   </Anchor>
                 </td>
@@ -41,7 +41,7 @@ const LandingContactsBlock = ({ isDesktop, anchor }: IProps) => {
               </tr>
               <tr>
                 <td style={{ borderTop: '0' }}>
-                  <Anchor href='https://api.whatsapp.com/send?phone=+79135673916' size={32} weight={600} color='black'>
+                  <Anchor href='https://api.whatsapp.com/send?phone=+79135673916' size={isDesktop ? 32 : 24} weight={600} color='black'>
                     +7 (913) 567 39-16
                   </Anchor>
                 </td>
@@ -62,7 +62,7 @@ const LandingContactsBlock = ({ isDesktop, anchor }: IProps) => {
               </tr>
               <tr>
                 <td style={{ borderTop: '0' }}>
-                  <Anchor href='mailto:kedrovy-dvor@mail.ru' size={32} weight={600} color='orange'>
+                  <Anchor href='mailto:kedrovy-dvor@mail.ru' size={isDesktop ? 32 : 24} weight={600} color='orange'>
                     kedrovy-dvor@mail.ru
                   </Anchor>
                 </td>
