@@ -10,6 +10,7 @@ import LandingPortfolioBlock from 'components/pages/landing/portfolio';
 import LandingProcessBlock from 'components/pages/landing/process';
 import LandingReviewsBlock from 'components/pages/landing/reviews';
 import LandingServicesBlock from 'components/pages/landing/services';
+import AppFooter from 'components/shared/footer';
 
 const useStyles = createStyles(() => ({
   header: {
@@ -96,6 +97,7 @@ const IndexPage = () => {
       <LandingFaqBlock isDesktop={isDesktop} />
       <LandingCtaBlock isDesktop={isDesktop} />
       <LandingContactsBlock isDesktop={isDesktop} anchor={contactsRef} />
+      <AppFooter />
     </AppShell>
   )
 };

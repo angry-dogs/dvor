@@ -2,18 +2,6 @@ html, body {
   font-family: Greycliff CF, -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
 
-tbody tr:hover {
-  background-color: var(--mantine-color-gray-0) !important;
-}
-
-.no-decoration {
-  text-decoration: double;
-}
-
-.link-color {
-  color: var(--mantine-color-blue-7);
-}
-
 .no-break {
   white-space: nowrap;
 }
