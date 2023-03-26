@@ -9,7 +9,7 @@ const LandingPlusesBlock = ({ isDesktop }: IProps) => {
   const data = [
     {
       title: 'Фиксированная стоимость',
-      desc: 'Она фиксирована после согласования сметы и подписания договора.',
+      desc: 'Она неизменна после согласования сметы и подписания договора.',
     },
     {
       title: 'Проект',
@@ -36,7 +36,7 @@ const LandingPlusesBlock = ({ isDesktop }: IProps) => {
   return (
     <Container
       size="lg"
-      // sx={{ minHeight: '100vh' }}
+      // mih='100vh'
       py={100}
     >
       <Stack align='center'>

@@ -41,7 +41,7 @@ const LandingContactsBlock = ({ isDesktop, anchor }: IProps) => {
               </tr>
               <tr>
                 <td style={{ borderTop: '0' }}>
-                  <Anchor href='tel:+79135673916' size={32} weight={600} color='black'>
+                  <Anchor href='https://api.whatsapp.com/send?phone=+79135673916' size={32} weight={600} color='black'>
                     +7 (913) 567 39-16
                   </Anchor>
                 </td>

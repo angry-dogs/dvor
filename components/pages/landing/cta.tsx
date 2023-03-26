@@ -91,7 +91,7 @@ const LandingCtaBlock = ({ isDesktop }: IProps) => {
         </Text>
 
         <Group className={classes.controls}>
-          <Link href='/accounts'>
+          {/* <Link href='/accounts'> */}
             <Button
               size="xl"
               className={classes.control}
@@ -100,7 +100,7 @@ const LandingCtaBlock = ({ isDesktop }: IProps) => {
             >
               Get started
             </Button>
-          </Link>
+          {/* </Link> */}
         </Group>
       </Container>
     </div>
