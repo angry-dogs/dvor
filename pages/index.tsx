@@ -97,7 +97,7 @@ const IndexPage = () => {
       <LandingFaqBlock isDesktop={isDesktop} />
       <LandingCtaBlock isDesktop={isDesktop} />
       <LandingContactsBlock isDesktop={isDesktop} anchor={contactsRef} />
-      <AppFooter />
+      <AppFooter isDesktop={isDesktop} />
     </AppShell>
   )
 };

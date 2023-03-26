@@ -3,7 +3,11 @@ import { Anchor, Box, Container, Group, Stack, Text } from '@mantine/core';
 import { useWindowScroll } from '@mantine/hooks';
 import { ArrowBarToUp } from 'tabler-icons-react';
 
-const AppFooter = () => {
+interface IProps {
+  isDesktop: boolean;
+}
+
+const AppFooter = ({ isDesktop }: IProps) => {
   const [scroll, scrollTo] = useWindowScroll();
 
   return (
@@ -20,7 +24,7 @@ const AppFooter = () => {
             <Anchor color='white' onClick={() => scrollTo({ y: 0 })}>
               <Group spacing='sm'>
                 <ArrowBarToUp />
-                <span>Вернуться в начало</span>
+                <span>{isDesktop ? 'Вернуться в начало' : 'В начало'}</span>
               </Group>
             </Anchor>
           </Group>
