@@ -1,5 +1,5 @@
-import { Anchor, AppShell, Burger, Button, createStyles, Group, Header, MediaQuery, rem, Stack, Text, useMantineTheme } from '@mantine/core';
-import { useDisclosure, useMediaQuery } from '@mantine/hooks';
+import { Anchor, AppShell, Burger, createStyles, Group, Header, MediaQuery, Stack, Text, useMantineTheme } from '@mantine/core';
+import { useDisclosure, useMediaQuery, useScrollIntoView } from '@mantine/hooks';
 import LandingContactsBlock from 'components/pages/landing/contacts';
 import LandingCtaBlock from 'components/pages/landing/cta';
 import LandingFaqBlock from 'components/pages/landing/faq';
@@ -11,9 +11,7 @@ import LandingProcessBlock from 'components/pages/landing/process';
 import LandingReviewsBlock from 'components/pages/landing/reviews';
 import LandingServicesBlock from 'components/pages/landing/services';
 
-const useStyles = createStyles((theme) => ({
-  // root: {
-  // },
+const useStyles = createStyles(() => ({
   header: {
     maxWidth: '71.25rem',
     marginLeft: 'auto',
@@ -36,6 +34,12 @@ const IndexPage = () => {
   const [opened, { close, open }] = useDisclosure(false);
   const isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.sm})`);
 
+  const { scrollIntoView: scrollToServices, targetRef: servicesRef } = useScrollIntoView<HTMLDivElement>();
+  const { scrollIntoView: scrollToPortfolio, targetRef: portfolioRef } = useScrollIntoView<HTMLDivElement>();
+  const { scrollIntoView: scrollToReview, targetRef: reviewRef } = useScrollIntoView<HTMLDivElement>();
+  const { scrollIntoView: scrollToContacts, targetRef: contactsRef } = useScrollIntoView<HTMLDivElement>();
+  const { scrollIntoView: scrollToForm, targetRef: formRef } = useScrollIntoView<HTMLDivElement>();
+
   return (
     <AppShell
       styles={{
@@ -45,7 +49,6 @@ const IndexPage = () => {
       }}
       header={
         <Header height={{ base: 50, md: 70 }} px="lg" className={classes.header}>
-          {/* <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}> */}
           <Group position='apart'>
             <Text size={24}>«Кедровый двор»</Text>
             <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
@@ -58,16 +61,16 @@ const IndexPage = () => {
 
             <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
               <Group spacing='xl'>
-                <Anchor size={18} href="#services">
+                <Anchor size={18} onClick={() => scrollToServices()}>
                   Услуги
                 </Anchor>
-                <Anchor size={18} href="#portfolio">
+                <Anchor size={18} onClick={() => scrollToPortfolio()}>
                   Работы
                 </Anchor>
-                <Anchor size={18} href="#reviews">
+                <Anchor size={18} onClick={() => scrollToReview()}>
                   Отзывы
                 </Anchor>
-                <Anchor size={18} href="#contacts">
+                <Anchor size={18}  onClick={() => scrollToContacts()}>
                   Контакты
                 </Anchor>
               </Group>
@@ -80,20 +83,19 @@ const IndexPage = () => {
               </Stack>
             </MediaQuery>
           </Group>
-          {/* </div> */}
         </Header>
       }
     >
-      <LandingHeroBlock isDesktop={isDesktop} />
-      <LandingServicesBlock isDesktop={isDesktop} />
-      <LandingPortfolioBlock isDesktop={isDesktop} />
-      <LandingReviewsBlock isDesktop={isDesktop} />
+      <LandingHeroBlock isDesktop={isDesktop} scrollToForm={scrollToForm} scrollToServices={scrollToServices} />
+      <LandingServicesBlock isDesktop={isDesktop} anchor={servicesRef} />
+      <LandingPortfolioBlock isDesktop={isDesktop} anchor={portfolioRef} />
+      <LandingReviewsBlock isDesktop={isDesktop} anchor={reviewRef} />
       <LandingPlusesBlock isDesktop={isDesktop} />
-      <LandingFormBlock isDesktop={isDesktop} />
+      <LandingFormBlock isDesktop={isDesktop} anchor={formRef} />
       <LandingProcessBlock isDesktop={isDesktop} />
       <LandingFaqBlock isDesktop={isDesktop} />
       <LandingCtaBlock isDesktop={isDesktop} />
-      <LandingContactsBlock isDesktop={isDesktop} />
+      <LandingContactsBlock isDesktop={isDesktop} anchor={contactsRef} />
     </AppShell>
   )
 };

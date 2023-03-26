@@ -1,10 +1,12 @@
+import { MutableRefObject } from "react";
 import { Box, Container, Stack, Text } from "@mantine/core";
 
 interface IProps {
   isDesktop: boolean;
+  anchor: MutableRefObject<HTMLDivElement>;
 }
 
-const LandingReviewsBlock = ({ isDesktop }: IProps) => {
+const LandingReviewsBlock = ({ isDesktop, anchor }: IProps) => {
 
   return (
     <Box bg='#eeeeee'>
@@ -12,7 +14,7 @@ const LandingReviewsBlock = ({ isDesktop }: IProps) => {
         size="lg"
         sx={{ minHeight: '100vh' }}
         py={100}
-        id='reviews'
+        ref={anchor}
       >
         <Stack align='center'>
           <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1} align='center'>

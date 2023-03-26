@@ -101,19 +101,6 @@ const LandingCtaBlock = ({ isDesktop }: IProps) => {
               Get started
             </Button>
           </Link>
-
-          <span>or</span>
-
-          <Button
-            component="a"
-            href="https://store.steampowered.com/app/570/Dota_2/"
-            size="xl"
-            variant="default"
-            className={classes.control}
-            leftIcon={<BrandSteam size={20} />}
-          >
-            Play Dota
-          </Button>
         </Group>
       </Container>
     </div>

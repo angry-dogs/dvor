@@ -63,9 +63,11 @@ const useStyles = createStyles((theme) => ({
 
 interface IProps {
   isDesktop: boolean;
+  scrollToForm: () => void;
+  scrollToServices: () => void;
 }
 
-const LandingHeroBlock = ({ isDesktop }: IProps) => {
+const LandingHeroBlock = ({ isDesktop, scrollToForm, scrollToServices }: IProps) => {
   const { classes } = useStyles();
   return (
     <div className={classes.root}>
@@ -96,6 +98,7 @@ const LandingHeroBlock = ({ isDesktop }: IProps) => {
               gradient={{ from: 'pink', to: 'yellow' }}
               size="xl"
               className={classes.control}
+              onClick={scrollToForm}
             >
               Оставить заявку
             </Button>
@@ -105,6 +108,7 @@ const LandingHeroBlock = ({ isDesktop }: IProps) => {
               size="xl"
               color='gray.0'
               className={classes.control}
+              onClick={scrollToServices}
             >
               Услуги
             </Button>

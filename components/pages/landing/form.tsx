@@ -1,7 +1,7 @@
+import { MutableRefObject, useState } from "react";
 import { Button, Container, createStyles, Grid, SimpleGrid, Stack, Text, TextInput, useMantineTheme } from "@mantine/core";
 import { Send } from "tabler-icons-react";
 import { useForm } from '@mantine/form';
-import { useState } from "react";
 import { notifications } from "@mantine/notifications";
 
 const useStyles = createStyles((theme) => ({
@@ -35,9 +35,10 @@ const useStyles = createStyles((theme) => ({
 
 interface IProps {
   isDesktop: boolean;
+  anchor: MutableRefObject<HTMLDivElement>;
 }
 
-const LandingFormBlock = ({ isDesktop }: IProps) => {
+const LandingFormBlock = ({ isDesktop, anchor }: IProps) => {
   const { classes } = useStyles();
   const theme = useMantineTheme();
   const [done, setDone] = useState(false);
@@ -86,7 +87,7 @@ const LandingFormBlock = ({ isDesktop }: IProps) => {
       <Container
         size="lg"
         py={100}
-        id='form'
+        ref={anchor}
         className={classes.inner}
         h='100%'
       >

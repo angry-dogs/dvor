@@ -24,7 +24,7 @@ const LandingFaqBlock = ({ isDesktop }: IProps) => {
   return (
     <Box bg='#eeeeee'>
       <Container
-        sx={{ minHeight: '100vh' }}
+        // sx={{ minHeight: '100vh' }}
         py={100}
       >
         <Stack align='center'>
@@ -82,7 +82,7 @@ const LandingFaqBlock = ({ isDesktop }: IProps) => {
             </Accordion.Item>
           </Accordion>
 
-          <Text>
+          <Text align='center'>
             Если у вас остались вопросы, пожалуйста, напишите нам на
             {' '}
             <Anchor href="mailto:kedrovy-dvor@mail.ru" color='orange'>

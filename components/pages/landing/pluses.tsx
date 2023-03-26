@@ -36,7 +36,7 @@ const LandingPlusesBlock = ({ isDesktop }: IProps) => {
   return (
     <Container
       size="lg"
-      sx={{ minHeight: '100vh' }}
+      // sx={{ minHeight: '100vh' }}
       py={100}
     >
       <Stack align='center'>
