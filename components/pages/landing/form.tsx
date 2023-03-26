@@ -134,12 +134,12 @@ const LandingFormBlock = ({ isDesktop, anchor }: IProps) => {
               </Grid.Col>
               <Grid.Col span={12} sm={3}>
                 <Button
-                  color='orange'
+                  variant="gradient"
+                  gradient={{ from: 'pink', to: 'yellow' }}
                   size='lg'
                   sx={{ width: '100%' }}
-                  // onClick={onSubmit}
-                  disabled={done}
                   type='submit'
+                  disabled={done}
                 >
                   <Send />&nbsp;
                   Отправить заявку
