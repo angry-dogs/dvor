@@ -21,7 +21,7 @@ const AppFooter = ({ isDesktop }: IProps) => {
               {new Date().getFullYear()}
             </Text>
 
-            <Anchor color='white' onClick={() => scrollTo({ y: 0 })}>
+            <Anchor color='white' onClick={() => scrollTo({ y: 0 })} rel='nofollow'>
               <Group spacing='sm'>
                 <ArrowBarToUp />
                 <span>{isDesktop ? 'Вернуться в начало' : 'В начало'}</span>

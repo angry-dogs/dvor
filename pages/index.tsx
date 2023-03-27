@@ -62,16 +62,16 @@ const IndexPage = () => {
 
             <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
               <Group spacing='xl'>
-                <Anchor size={18} onClick={() => scrollToServices()}>
+                <Anchor size={18} onClick={() => scrollToServices()} rel='nofollow'>
                   Услуги
                 </Anchor>
-                <Anchor size={18} onClick={() => scrollToPortfolio()}>
+                <Anchor size={18} onClick={() => scrollToPortfolio()} rel='nofollow'>
                   Работы
                 </Anchor>
-                <Anchor size={18} onClick={() => scrollToReview()}>
+                <Anchor size={18} onClick={() => scrollToReview()} rel='nofollow'>
                   Отзывы
                 </Anchor>
-                <Anchor size={18}  onClick={() => scrollToContacts()}>
+                <Anchor size={18} onClick={() => scrollToContacts()} rel='nofollow'>
                   Контакты
                 </Anchor>
               </Group>
