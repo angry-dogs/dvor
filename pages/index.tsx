@@ -11,6 +11,8 @@ import LandingProcessBlock from 'components/pages/landing/process';
 import LandingReviewsBlock from 'components/pages/landing/reviews';
 import LandingServicesBlock from 'components/pages/landing/services';
 import AppFooter from 'components/shared/footer';
+import AppNavbar from 'components/shared/navbar';
+import Link from 'next/link';
 
 const useStyles = createStyles(() => ({
   header: {
@@ -27,12 +29,14 @@ const useStyles = createStyles(() => ({
       color: 'white',
     }
   },
+
+  brand: {
+    textDecoration: 'none',
+  }
 }));
 
 const IndexPage = () => {
-  const { classes } = useStyles();
   const theme = useMantineTheme();
-  const [opened, { close, open }] = useDisclosure(false);
   const isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.sm})`);
 
   const { scrollIntoView: scrollToServices, targetRef: servicesRef } = useScrollIntoView<HTMLDivElement>();
@@ -49,42 +53,12 @@ const IndexPage = () => {
         }
       }}
       header={
-        <Header height={{ base: 50, md: 70 }} px="lg" className={classes.header}>
-          <Group position='apart'>
-            <Text size={24}>«Кедровый двор»</Text>
-            <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
-              <Burger
-                opened={opened}
-                onClick={() => opened ? close() : open()}
-                color='white'
-              />
-            </MediaQuery>
-
-            <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
-              <Group spacing='xl'>
-                <Anchor size={18} onClick={() => scrollToServices()} rel='nofollow'>
-                  Услуги
-                </Anchor>
-                <Anchor size={18} onClick={() => scrollToPortfolio()} rel='nofollow'>
-                  Работы
-                </Anchor>
-                <Anchor size={18} onClick={() => scrollToReview()} rel='nofollow'>
-                  Отзывы
-                </Anchor>
-                <Anchor size={18} onClick={() => scrollToContacts()} rel='nofollow'>
-                  Контакты
-                </Anchor>
-              </Group>
-            </MediaQuery>
-
-            <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
-              <Stack spacing={0}>
-                <Anchor href='tel:+79029913632'>+7 (902) 991 36-32</Anchor>
-                <Text>Пн-сб: 9:00 – 21:00</Text>
-              </Stack>
-            </MediaQuery>
-          </Group>
-        </Header>
+        <AppNavbar
+          scrollToServices={scrollToServices}
+          scrollToPortfolio={scrollToPortfolio}
+          scrollToReview={scrollToReview}
+          scrollToContacts={scrollToContacts}
+        />
       }
     >
       <LandingHeroBlock isDesktop={isDesktop} scrollToForm={scrollToForm} scrollToServices={scrollToServices} />

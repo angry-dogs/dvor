@@ -1,6 +1,11 @@
-import { Container, Text } from "@mantine/core";
+import { Container, Stack } from "@mantine/core"
+import BlogCard from "components/pages/blog/card";
+import { IArticle } from "interfaces";
+import { activeArticles } from "helpers/articles";
 
 const BlogIndexPage = () => {
+  // const theme = useMantineTheme();
+  // const isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.sm})`);
 
   return (
     <Container
@@ -8,10 +13,9 @@ const BlogIndexPage = () => {
       mih='100vh'
       py={100}
     >
-      <Text size={42} weight={600} lh={1.1} align='center'>
-        Блог
-      </Text>
-
+      <Stack spacing='xl'>
+        {activeArticles.map((article: IArticle) => <BlogCard key={Math.random()} article={article} />)}
+      </Stack>
     </Container>
   )
 };

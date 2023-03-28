@@ -1,12 +1,17 @@
 import { AppProps } from 'next/app';
 import Script from 'next/script';
-import { MantineProvider } from '@mantine/core';
+import { Box, MantineProvider } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
 import { SEO } from 'next-seo.config';
 import { DefaultSeo } from 'next-seo';
+import { useRouter } from 'next/router';
+import AppLayout from 'components/shared/layout';
 import './styles.css';
 
 const KedrovyDvorApp = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
+  const Layout = router.asPath === '/' ? Box : AppLayout;
+
   return (
     <>
       {/* Google Tag Manager - Global base code */}
@@ -31,7 +36,9 @@ const KedrovyDvorApp = ({ Component, pageProps }: AppProps) => {
       >
         <Notifications position='top-center' />
         <DefaultSeo {...SEO} />
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </MantineProvider>
     </>
   )
