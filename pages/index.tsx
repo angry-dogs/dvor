@@ -1,5 +1,5 @@
-import { Anchor, AppShell, Burger, createStyles, Group, Header, MediaQuery, Stack, Text, useMantineTheme } from '@mantine/core';
-import { useDisclosure, useMediaQuery, useScrollIntoView } from '@mantine/hooks';
+import { AppShell, useMantineTheme } from '@mantine/core';
+import { useMediaQuery, useScrollIntoView } from '@mantine/hooks';
 import LandingContactsBlock from 'components/pages/landing/contacts';
 import LandingCtaBlock from 'components/pages/landing/cta';
 import LandingFaqBlock from 'components/pages/landing/faq';
@@ -12,28 +12,6 @@ import LandingReviewsBlock from 'components/pages/landing/reviews';
 import LandingServicesBlock from 'components/pages/landing/services';
 import AppFooter from 'components/shared/footer';
 import AppNavbar from 'components/shared/navbar';
-import Link from 'next/link';
-
-const useStyles = createStyles(() => ({
-  header: {
-    maxWidth: '71.25rem',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    border: '0',
-    position: 'absolute',
-    backgroundColor: 'inherit',
-    padding: '20px 0',
-    color: 'white',
-
-    a: {
-      color: 'white',
-    }
-  },
-
-  brand: {
-    textDecoration: 'none',
-  }
-}));
 
 const IndexPage = () => {
   const theme = useMantineTheme();
