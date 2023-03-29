@@ -1,10 +1,10 @@
-const BaseUrl = 'https://kedrovy-dvor.com';
+export const PublicDomain = 'https://kedrovy-dvor.com';
 
 export const SEO = {
-  titleTemplate: '%s | Строительная компания «Кедровый двор»',
+  titleTemplate: '%s – Строительная компания «Кедровый двор»',
   defaultTitle: 'Строительная компания «Кедровый двор»',
   description: 'Проектирование и строительство загородных домов под ключ в Красноярском крае, России и странах СНГ',
-  canonical: BaseUrl,
+  canonical: PublicDomain,
   additionalMetaTags: [
     {
       property: 'dc:creator',
@@ -22,7 +22,7 @@ export const SEO = {
     type: 'website',
     locale: 'ru_RU',
     description: 'Проектирование и строительство загородных домов под ключ в Красноярском крае, России и странах СНГ',
-    url: BaseUrl,
+    url: PublicDomain,
     images: [
       {
         url: 'https://kedrovy-dvor.com/img/bg-1.jpg',
