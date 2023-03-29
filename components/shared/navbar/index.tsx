@@ -15,11 +15,15 @@ const useStyles = createStyles(() => ({
 
     a: {
       color: 'white',
-      textDecoration: 'none',
-      '::hover': {
-        textDecoration: 'underline',
-      }
     }
+  },
+
+  link: {
+    fontSize: '18px',
+    // textDecoration: 'none',
+    // '::hover': {
+    //   textDecoration: 'underline',
+    // }
   },
 
   brand: {
@@ -54,22 +58,22 @@ const AppNavbar = ({ scrollToServices, scrollToPortfolio, scrollToReview, scroll
 
         <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
           <Group spacing='xl'>
-            <Anchor size={18} onClick={() => scrollToServices()} rel='nofollow'>
+            <Anchor onClick={() => scrollToServices()} rel='nofollow' className={classes.link}>
               Услуги
             </Anchor>
-            <Anchor size={18} onClick={() => scrollToPortfolio()} rel='nofollow'>
+            <Anchor onClick={() => scrollToPortfolio()} rel='nofollow' className={classes.link}>
               Работы
             </Anchor>
-            <Anchor size={18} onClick={() => scrollToReview()} rel='nofollow'>
+            <Anchor onClick={() => scrollToReview()} rel='nofollow' className={classes.link}>
               Отзывы
             </Anchor>
-            <Anchor size={18} onClick={() => scrollToContacts()} rel='nofollow'>
+            <Anchor onClick={() => scrollToContacts()} rel='nofollow' className={classes.link}>
               Контакты
             </Anchor>
-            <Link href='/blog' legacyBehavior>
-              <Anchor size={18}>
+            <Link href='/blog' legacyBehavior className={classes.link}>
+              {/* <Anchor size={18}> */}
                 Блог
-              </Anchor>
+              {/* </Anchor> */}
             </Link>
           </Group>
         </MediaQuery>
