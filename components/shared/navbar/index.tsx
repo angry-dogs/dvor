@@ -66,7 +66,7 @@ const AppNavbar = ({ scrollToServices, scrollToPortfolio, scrollToReview, scroll
             <Anchor size={18} onClick={() => scrollToContacts()} rel='nofollow'>
               Контакты
             </Anchor>
-            <Link href='/blog'>
+            <Link href='/blog' legacyBehavior>
               <Anchor size={18}>
                 Блог
               </Anchor>

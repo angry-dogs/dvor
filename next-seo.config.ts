@@ -14,7 +14,10 @@ export const SEO = {
       name: 'application-name',
       content: 'Кедровый двор',
     },
-    { name: 'theme-color', content: '#000000' },
+    {
+      name: 'theme-color',
+      content: '#000000',
+    },
   ],
   openGraph: {
     title: 'Строительная компания «Кедровый двор»',

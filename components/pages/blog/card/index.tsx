@@ -6,6 +6,7 @@ import { Article } from "tabler-icons-react";
 const useStyles = createStyles((theme) => ({
   link: {
     textDecoration: 'none !important',
+    cursor: 'pointer',
   },
   card: {
     position: 'relative',

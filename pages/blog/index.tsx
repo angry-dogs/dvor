@@ -6,15 +6,23 @@ import { NextSeo } from "next-seo";
 import { PublicDomain } from "next-seo.config";
 
 const BlogIndexPage = () => {
-  // const theme = useMantineTheme();
-  // const isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.sm})`);
+  const seo = {
+    title: 'Блог',
+    desc: 'Блог строительной компании «Кедровый двор» расскажет об особенностях строительства домов из дерева в России и странах СНГ',
+    url: `${PublicDomain}/blog`,
+  };
 
   return (
     <>
       <NextSeo
-        title='Блог'
-        description="Блог строительной компании «Кедровый двор» расскажет об особенностях строительства домов из дерева в России и странах СНГ"
-        canonical={`${PublicDomain}/blog`}
+        title={seo.title}
+        description={seo.desc}
+        canonical={seo.url}
+        openGraph={{
+          title: seo.title,
+          description: seo.desc,
+          url: seo.url,
+        }}
       />
       <Container
         size="lg"
