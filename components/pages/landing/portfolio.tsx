@@ -1,6 +1,5 @@
 import { MutableRefObject, useState } from "react";
-import { Box, Container, createStyles, Image, Modal, SimpleGrid, Stack, Text, useMantineTheme } from "@mantine/core";
-import { Carousel } from '@mantine/carousel';
+import { Box, Container, createStyles, Image, SimpleGrid, Stack, Text, useMantineTheme } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
@@ -13,21 +12,6 @@ const useStyles = createStyles(() => ({
         height: '100%',
         img: {
           height: '100% !important',
-        }
-      }
-    }
-  },
-
-  slide: {
-    div: {
-      // height: '100%',
-      figure: {
-        // height: '100%',
-        div: {
-          // height: '100%',
-          img: {
-            height: '100% !important',
-          }
         }
       }
     }
@@ -91,7 +75,7 @@ const LandingPortfolioBlock = ({ isDesktop, anchor }: IProps) => {
 
       <Lightbox
         open={opened}
-        close={() => close()}
+        close={close}
         index={activeSlide}
         slides={[
           { src: "/img/portfolio/original/1.jpeg" },
