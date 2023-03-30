@@ -1,4 +1,4 @@
-import { List, Text, Title } from "@mantine/core"
+import { List, Text } from "@mantine/core"
 import BlogLayout from "components/shared/layout/blog";
 import { NextSeo } from "next-seo";
 import { PublicDomain } from "next-seo.config";
@@ -22,11 +22,8 @@ const BlogPage1 = () => {
           url: seo.url,
         }}
       />
-      <BlogLayout title='Дом из оцилиндрованного бревна'>
+      <BlogLayout title='Строительство дома из оцилиндрованного бревна'>
         <>
-          <Title order={1} mb={50}>
-            Строительство дома из оцилиндрованного бревна
-          </Title>
           <Text size={18}>
             <p>
               Строительство домов из оцелиндрованного бревна было популярно в прошлом, и до сих пор многие люди выбирают этот материал для своего будущего дома. Немало причин делают оцелиндрованное бревно привлекательным для строительства, включая его низкую стоимость, внешнюю привлекательность и экологическую дружественность.

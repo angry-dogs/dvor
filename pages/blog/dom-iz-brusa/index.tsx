@@ -1,4 +1,4 @@
-import { Text, Title } from "@mantine/core"
+import { Text } from "@mantine/core"
 import BlogLayout from "components/shared/layout/blog";
 import { NextSeo } from "next-seo";
 import { PublicDomain } from "next-seo.config";
@@ -22,11 +22,8 @@ const BlogPage1 = () => {
           url: seo.url,
         }}
       />
-      <BlogLayout title='Дом из бруса'>
+      <BlogLayout title='Строительство дома из бруса'>
         <>
-          <Title order={1} mb={50}>
-            Строительство дома из бруса
-          </Title>
           <Text size={18}>
             <p>
               Строительство домов из бруса становится все более популярным в современном мире. Этот тип строительства имеет множество преимуществ, включая долговечность, экологичность и привлекательность внешнего вида.
