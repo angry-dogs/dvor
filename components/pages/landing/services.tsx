@@ -3,17 +3,17 @@ import { Container, Stack, Text, useMantineTheme } from "@mantine/core";
 
 interface IProps {
   isDesktop: boolean;
-  anchor: MutableRefObject<HTMLDivElement>;
+  servicesRef: MutableRefObject<HTMLDivElement>;
 }
 
-const LandingServicesBlock = ({ isDesktop, anchor }: IProps) => {
+const LandingServicesBlock = ({ isDesktop, servicesRef }: IProps) => {
   const theme = useMantineTheme();
   return (
     <Container
       size="lg"
       sx={{ minHeight: '100vh' }}
       py={100}
-      ref={anchor}
+      ref={servicesRef}
     >
       <Stack align='center'>
         <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1} align='center'>

@@ -6,6 +6,7 @@ import 'yet-another-react-lightbox/styles.css';
 
 const useStyles = createStyles(() => ({
   image: {
+    cursor: 'pointer',
     figure: {
       height: '100%',
       div: {
@@ -20,16 +21,16 @@ const useStyles = createStyles(() => ({
 
 interface IProps {
   isDesktop: boolean;
-  anchor: MutableRefObject<HTMLDivElement>;
+  portfolioRef: MutableRefObject<HTMLDivElement>;
 }
 
-const LandingPortfolioBlock = ({ isDesktop, anchor }: IProps) => {
+const LandingPortfolioBlock = ({ isDesktop, portfolioRef }: IProps) => {
   const theme = useMantineTheme();
   const { classes } = useStyles();
   const [opened, { open, close }] = useDisclosure(false);
   const [activeSlide, setActiveSlide] = useState<number>(1);
 
-  const openModal = (index: number) => {
+  const showImage = (index: number) => {
     setActiveSlide(index);
     open();
   };
@@ -41,7 +42,7 @@ const LandingPortfolioBlock = ({ isDesktop, anchor }: IProps) => {
           size='xl'
           mih='100vh'
           py={100}
-          ref={anchor}
+          ref={portfolioRef}
         >
           <Stack align='center'>
             <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1} align='center'>
@@ -61,14 +62,14 @@ const LandingPortfolioBlock = ({ isDesktop, anchor }: IProps) => {
               { maxWidth: theme.breakpoints.sm, cols: 1 },
             ]}
           >
-            <Image h='300px' className={classes.image} onClick={() => { openModal(0) }} src="/img/portfolio/preview/1.jpg" alt="Portfolio" />
-            <Image h='300px' className={classes.image} onClick={() => { openModal(1) }} src="/img/portfolio/preview/2.jpg" alt="Portfolio" />
-            <Image h='300px' className={classes.image} onClick={() => { openModal(2) }} src="/img/portfolio/preview/3.jpg" alt="Portfolio" />
-            <Image h='300px' className={classes.image} onClick={() => { openModal(3) }} src="/img/portfolio/preview/4.jpg" alt="Portfolio" />
-            <Image h='300px' className={classes.image} onClick={() => { openModal(4) }} src="/img/portfolio/preview/5.jpg" alt="Portfolio" />
-            <Image h='300px' className={classes.image} onClick={() => { openModal(5) }} src="/img/portfolio/preview/6.jpg" alt="Portfolio" />
-            <Image h='300px' className={classes.image} onClick={() => { openModal(6) }} src="/img/portfolio/preview/7.jpg" alt="Portfolio" />
-            <Image h='300px' className={classes.image} onClick={() => { openModal(7) }} src="/img/portfolio/preview/8.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { showImage(0) }} src="/img/portfolio/preview/1.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { showImage(1) }} src="/img/portfolio/preview/2.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { showImage(2) }} src="/img/portfolio/preview/3.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { showImage(3) }} src="/img/portfolio/preview/4.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { showImage(4) }} src="/img/portfolio/preview/5.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { showImage(5) }} src="/img/portfolio/preview/6.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { showImage(6) }} src="/img/portfolio/preview/7.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { showImage(7) }} src="/img/portfolio/preview/8.jpg" alt="Portfolio" />
           </SimpleGrid>
         </Container>
       </Box>

@@ -3,10 +3,10 @@ import { Box, Container, Stack, Text } from "@mantine/core";
 
 interface IProps {
   isDesktop: boolean;
-  anchor: MutableRefObject<HTMLDivElement>;
+  reviewRef: MutableRefObject<HTMLDivElement>;
 }
 
-const LandingReviewsBlock = ({ isDesktop, anchor }: IProps) => {
+const LandingReviewsBlock = ({ isDesktop, reviewRef }: IProps) => {
 
   return (
     <Box bg='#eeeeee'>
@@ -14,7 +14,7 @@ const LandingReviewsBlock = ({ isDesktop, anchor }: IProps) => {
         size="lg"
         sx={{ minHeight: '100vh' }}
         py={100}
-        ref={anchor}
+        ref={reviewRef}
       >
         <Stack align='center'>
           <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1} align='center'>

@@ -4,10 +4,10 @@ import { At, BrandTelegram, BrandWhatsapp, PhoneCall } from "tabler-icons-react"
 
 interface IProps {
   isDesktop: boolean;
-  anchor: MutableRefObject<HTMLDivElement>;
+  contactsRef: MutableRefObject<HTMLDivElement>;
 }
 
-const LandingContactsBlock = ({ isDesktop, anchor }: IProps) => {
+const LandingContactsBlock = ({ isDesktop, contactsRef }: IProps) => {
   const theme = useMantineTheme();
 
   return (
@@ -16,7 +16,7 @@ const LandingContactsBlock = ({ isDesktop, anchor }: IProps) => {
         size="lg"
         // mih='100vh'
         py={100}
-        ref={anchor}
+        ref={contactsRef}
       >
         <Text size={isDesktop ? 42 : 30} weight={600} lh={1.1} align='center'>
           Контакты

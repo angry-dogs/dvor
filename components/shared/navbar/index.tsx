@@ -1,5 +1,4 @@
 import { Anchor, Burger, createStyles, Group, Header, MediaQuery, Stack, Text } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
 import Link from 'next/link';
 
 const useStyles = createStyles(() => ({
@@ -15,15 +14,8 @@ const useStyles = createStyles(() => ({
 
     a: {
       color: 'white',
+      fontSize: '18px',
     }
-  },
-
-  link: {
-    fontSize: '18px',
-    // textDecoration: 'none',
-    // '::hover': {
-    //   textDecoration: 'underline',
-    // }
   },
 
   brand: {
@@ -32,15 +24,25 @@ const useStyles = createStyles(() => ({
 }));
 
 interface IProps {
+  burgerOpened: boolean;
+  burgerOpen: () => void;
+  burgerClose: () => void;
   scrollToServices: () => void;
   scrollToPortfolio: () => void;
   scrollToReview: () => void;
   scrollToContacts: () => void;
 };
 
-const AppNavbar = ({ scrollToServices, scrollToPortfolio, scrollToReview, scrollToContacts }: IProps) => {
+const AppNavbar = ({
+  burgerOpened,
+  burgerOpen,
+  burgerClose,
+  scrollToServices,
+  scrollToPortfolio,
+  scrollToReview,
+  scrollToContacts,
+}: IProps) => {
   const { classes } = useStyles();
-  const [opened, { close, open }] = useDisclosure(false);
 
   return (
     <Header height={{ base: 50, md: 70 }} px="lg" className={classes.header}>
@@ -50,30 +52,28 @@ const AppNavbar = ({ scrollToServices, scrollToPortfolio, scrollToReview, scroll
         </Link>
         <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
           <Burger
-            opened={opened}
-            onClick={() => opened ? close() : open()}
+            opened={burgerOpened}
+            onClick={burgerOpened ? burgerClose : burgerOpen}
             color='white'
           />
         </MediaQuery>
 
         <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
           <Group spacing='xl'>
-            <Anchor onClick={() => scrollToServices()} rel='nofollow' className={classes.link}>
+            <Anchor onClick={() => scrollToServices()} rel='nofollow'>
               Услуги
             </Anchor>
-            <Anchor onClick={() => scrollToPortfolio()} rel='nofollow' className={classes.link}>
+            <Anchor onClick={() => scrollToPortfolio()} rel='nofollow'>
               Работы
             </Anchor>
-            <Anchor onClick={() => scrollToReview()} rel='nofollow' className={classes.link}>
+            <Anchor onClick={() => scrollToReview()} rel='nofollow'>
               Отзывы
             </Anchor>
-            <Anchor onClick={() => scrollToContacts()} rel='nofollow' className={classes.link}>
+            <Anchor onClick={() => scrollToContacts()} rel='nofollow'>
               Контакты
             </Anchor>
-            <Link href='/blog' legacyBehavior className={classes.link}>
-              {/* <Anchor size={18}> */}
-                Блог
-              {/* </Anchor> */}
+            <Link href='/blog' legacyBehavior className='link'>
+              Блог
             </Link>
           </Group>
         </MediaQuery>

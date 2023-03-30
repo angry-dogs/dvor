@@ -1,16 +1,18 @@
 import { AppProps } from 'next/app';
 import Script from 'next/script';
-import { Box, MantineProvider } from '@mantine/core';
+import { MantineProvider, useMantineTheme } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
 import { SEO } from 'next-seo.config';
 import { DefaultSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import AppLayout from 'components/shared/layout';
+import { useMediaQuery } from '@mantine/hooks';
 import './styles.css';
 
 const KedrovyDvorApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
-  const Layout = router.asPath === '/' ? Box : AppLayout;
+  const theme = useMantineTheme();
+  const isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.sm})`);
 
   return (
     <>
@@ -36,9 +38,9 @@ const KedrovyDvorApp = ({ Component, pageProps }: AppProps) => {
       >
         <Notifications position='top-center' />
         <DefaultSeo {...SEO} />
-        <Layout>
+        <AppLayout isDesktop={isDesktop}>
           <Component {...pageProps} />
-        </Layout>
+        </AppLayout>
       </MantineProvider>
     </>
   )

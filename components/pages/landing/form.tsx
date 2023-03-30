@@ -35,10 +35,10 @@ const useStyles = createStyles((theme) => ({
 
 interface IProps {
   isDesktop: boolean;
-  anchor: MutableRefObject<HTMLDivElement>;
+  formRef: MutableRefObject<HTMLDivElement>;
 }
 
-const LandingFormBlock = ({ isDesktop, anchor }: IProps) => {
+const LandingFormBlock = ({ isDesktop, formRef }: IProps) => {
   const { classes } = useStyles();
   const theme = useMantineTheme();
   const [done, setDone] = useState(false);
@@ -87,7 +87,7 @@ const LandingFormBlock = ({ isDesktop, anchor }: IProps) => {
       <Container
         size="lg"
         py={100}
-        ref={anchor}
+        ref={formRef}
         className={classes.inner}
         h='100%'
       >
