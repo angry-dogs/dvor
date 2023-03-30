@@ -2,6 +2,8 @@ import { MutableRefObject, useState } from "react";
 import { Box, Container, createStyles, Image, Modal, SimpleGrid, Stack, Text, useMantineTheme } from "@mantine/core";
 import { Carousel } from '@mantine/carousel';
 import { useDisclosure } from "@mantine/hooks";
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 const useStyles = createStyles(() => ({
   image: {
@@ -50,52 +52,6 @@ const LandingPortfolioBlock = ({ isDesktop, anchor }: IProps) => {
 
   return (
     <>
-      <Modal
-        opened={opened}
-        onClose={close}
-        title=' '
-        transitionProps={{ transition: 'fade', duration: 200 }}
-        fullScreen
-      >
-        <div style={{ height: '100%', display: 'flex' }}>
-          <Carousel
-            mx="auto"
-            height="100%"
-            sx={{ flex: 1 }}
-            controlSize={40}
-            withIndicators
-            initialSlide={activeSlide}
-            withKeyboardEvents
-            loop
-          >
-            <Carousel.Slide className={classes.slide}>
-              <Image src="/img/portfolio/1.jpeg" alt="Portfolio" />
-            </Carousel.Slide>
-            <Carousel.Slide className={classes.slide}>
-              <Image src="/img/portfolio/2.jpeg" alt="Portfolio" />
-            </Carousel.Slide>
-            <Carousel.Slide className={classes.slide}>
-              <Image src="/img/portfolio/3.jpeg" alt="Portfolio" />
-            </Carousel.Slide>
-            <Carousel.Slide className={classes.slide}>
-              <Image src="/img/portfolio/4.jpeg" alt="Portfolio" />
-            </Carousel.Slide>
-            <Carousel.Slide className={classes.slide}>
-              <Image src="/img/portfolio/5.jpeg" alt="Portfolio" />
-            </Carousel.Slide>
-            <Carousel.Slide className={classes.slide}>
-              <Image src="/img/portfolio/6.jpeg" alt="Portfolio" />
-            </Carousel.Slide>
-            <Carousel.Slide className={classes.slide}>
-              <Image src="/img/portfolio/7.jpeg" alt="Portfolio" />
-            </Carousel.Slide>
-            <Carousel.Slide className={classes.slide}>
-              <Image src="/img/portfolio/8.jpeg" alt="Portfolio" />
-            </Carousel.Slide>
-          </Carousel>
-        </div>
-      </Modal>
-
       <Box bg='#eeeeee'>
         <Container
           size='xl'
@@ -121,17 +77,33 @@ const LandingPortfolioBlock = ({ isDesktop, anchor }: IProps) => {
               { maxWidth: theme.breakpoints.sm, cols: 1 },
             ]}
           >
-            <Image h='300px' className={classes.image} onClick={() => { openModal(0) }} src="/img/portfolio/1.jpeg" alt="Portfolio" />
-            <Image h='300px' className={classes.image} onClick={() => { openModal(1) }} src="/img/portfolio/2.jpeg" alt="Portfolio" />
-            <Image h='300px' className={classes.image} onClick={() => { openModal(2) }} src="/img/portfolio/3.jpeg" alt="Portfolio" />
-            <Image h='300px' className={classes.image} onClick={() => { openModal(3) }} src="/img/portfolio/4.jpeg" alt="Portfolio" />
-            <Image h='300px' className={classes.image} onClick={() => { openModal(4) }} src="/img/portfolio/5.jpeg" alt="Portfolio" />
-            <Image h='300px' className={classes.image} onClick={() => { openModal(5) }} src="/img/portfolio/6.jpeg" alt="Portfolio" />
-            <Image h='300px' className={classes.image} onClick={() => { openModal(6) }} src="/img/portfolio/7.jpeg" alt="Portfolio" />
-            <Image h='300px' className={classes.image} onClick={() => { openModal(7) }} src="/img/portfolio/8.jpeg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { openModal(0) }} src="/img/portfolio/preview/1.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { openModal(1) }} src="/img/portfolio/preview/2.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { openModal(2) }} src="/img/portfolio/preview/3.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { openModal(3) }} src="/img/portfolio/preview/4.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { openModal(4) }} src="/img/portfolio/preview/5.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { openModal(5) }} src="/img/portfolio/preview/6.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { openModal(6) }} src="/img/portfolio/preview/7.jpg" alt="Portfolio" />
+            <Image h='300px' className={classes.image} onClick={() => { openModal(7) }} src="/img/portfolio/preview/8.jpg" alt="Portfolio" />
           </SimpleGrid>
         </Container>
       </Box>
+
+      <Lightbox
+        open={opened}
+        close={() => close()}
+        index={activeSlide}
+        slides={[
+          { src: "/img/portfolio/original/1.jpeg" },
+          { src: "/img/portfolio/original/2.jpeg" },
+          { src: "/img/portfolio/original/3.jpeg" },
+          { src: "/img/portfolio/original/4.jpeg" },
+          { src: "/img/portfolio/original/5.jpeg" },
+          { src: "/img/portfolio/original/6.jpeg" },
+          { src: "/img/portfolio/original/7.jpeg" },
+          { src: "/img/portfolio/original/8.jpeg" },
+        ]}
+      />
     </>
   )
 };
