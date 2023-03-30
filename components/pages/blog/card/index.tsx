@@ -58,7 +58,7 @@ const BlogCard = ({ article }: IProps) => {
           {article.title}
         </Text>
         <Text size="sm" mt="sm" color="dimmed">
-          {article.previewDesc}
+          {article.previewDesc} ...
         </Text>
       </Paper>
     </Link>

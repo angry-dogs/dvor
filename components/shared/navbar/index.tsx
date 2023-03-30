@@ -24,6 +24,7 @@ const useStyles = createStyles(() => ({
 }));
 
 interface IProps {
+  isDesktop: boolean;
   burgerOpened: boolean;
   burgerOpen: () => void;
   burgerClose: () => void;
@@ -34,6 +35,7 @@ interface IProps {
 };
 
 const AppNavbar = ({
+  isDesktop,
   burgerOpened,
   burgerOpen,
   burgerClose,
@@ -45,10 +47,15 @@ const AppNavbar = ({
   const { classes } = useStyles();
 
   return (
-    <Header height={{ base: 50, md: 70 }} px="lg" className={classes.header}>
+    <Header
+      px="lg"
+      height={{ base: 50, md: 70 }}
+      className={classes.header}
+      bg={!isDesktop && burgerOpened ? 'dark' : ''}
+    >
       <Group position='apart'>
         <Link href='/' className={classes.brand}>
-          <Text size={24}>«Кедровый двор»</Text>
+          <Text size={24} onClick={burgerClose}>«Кедровый двор»</Text>
         </Link>
         <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
           <Burger
@@ -72,8 +79,8 @@ const AppNavbar = ({
             <Anchor onClick={() => scrollToContacts()} rel='nofollow'>
               Контакты
             </Anchor>
-            <Link href='/blog' legacyBehavior className='link'>
-              Блог
+            <Link href='/blog' legacyBehavior>
+              <a className='link'>Блог</a>
             </Link>
           </Group>
         </MediaQuery>
