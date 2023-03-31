@@ -50,8 +50,8 @@ const IndexPage = ({
       <LandingHeroBlock isDesktop={isDesktop} scrollToForm={scrollToForm} scrollToServices={scrollToServices} />
       <LandingServicesBlock isDesktop={isDesktop} servicesRef={servicesRef} />
       <LandingPortfolioBlock isDesktop={isDesktop} portfolioRef={portfolioRef} />
-      <LandingReviewsBlock isDesktop={isDesktop} reviewRef={reviewRef} />
       <LandingPlusesBlock isDesktop={isDesktop} />
+      <LandingReviewsBlock isDesktop={isDesktop} reviewRef={reviewRef} />
       <LandingFormBlock isDesktop={isDesktop} formRef={formRef} />
       <LandingProcessBlock isDesktop={isDesktop} />
       <LandingFaqBlock isDesktop={isDesktop} />

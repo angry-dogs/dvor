@@ -1,4 +1,5 @@
 import { createStyles, Container, Text, Button, Group, rem, Box, Title, Stack } from '@mantine/core';
+import { Click } from 'tabler-icons-react';
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -67,7 +68,7 @@ const LandingCtaBlock = ({ isDesktop, scrollToForm }: IProps) => {
   const dateString = `${day.length === 1 ? `0${day}` : day}.${month.length === 1 ? `0${month}` : month}.${deadline.getFullYear()}`;
 
   return (
-    <Box bg='orange'>
+    <Box sx={(theme) => ({ backgroundImage: theme.fn.gradient({ from: 'red', to: 'orange', deg: 45 }) })}>
       <Container
         size="sm"
         py={160}
@@ -75,12 +76,13 @@ const LandingCtaBlock = ({ isDesktop, scrollToForm }: IProps) => {
         h='100%'
       >
         <Stack align='center'>
-          <Title order={2} align='center' color="white" size={isDesktop ? 42 : 30}>
+          <Title order={2} align='center' color="white" size={isDesktop ? 42 : 30} lh={1.7}>
             <>
               Оставь заявку до {dateString} и получи{' '}
-              <Text component="span" variant="gradient" gradient={{ from: 'pink', to: 'violet' }} inherit>
+              {/* <Text component="span" variant="gradient" gradient={{ from: 'pink', to: 'violet' }} inherit> */}
+              <Text component="span" bg='black' color='yellow.1' inherit py={8} px={12}>
                 проект в подарок
-              </Text>!
+              </Text>
             </>
           </Title>
 
@@ -93,9 +95,10 @@ const LandingCtaBlock = ({ isDesktop, scrollToForm }: IProps) => {
               size="xl"
               className={classes.control}
               variant="gradient"
-              gradient={{ from: 'cyan', to: 'teal' }}
+              gradient={{ from: 'blue', to: 'cyan' }}
               onClick={scrollToForm}
             >
+              <Click />&nbsp;
               Оставить заявку сейчас
             </Button>
           </Group>
