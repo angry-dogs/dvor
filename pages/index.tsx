@@ -55,7 +55,7 @@ const IndexPage = ({
       <LandingFormBlock isDesktop={isDesktop} formRef={formRef} />
       <LandingProcessBlock isDesktop={isDesktop} />
       <LandingFaqBlock isDesktop={isDesktop} />
-      <LandingCtaBlock isDesktop={isDesktop} />
+      <LandingCtaBlock isDesktop={isDesktop} scrollToForm={scrollToForm} />
       <LandingContactsBlock isDesktop={isDesktop} contactsRef={contactsRef} />
     </>
   )

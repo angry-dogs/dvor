@@ -1,15 +1,6 @@
-import { createStyles, Container, Text, Button, Group, rem } from '@mantine/core';
-import Link from 'next/link';
-import { BrandSteam } from 'tabler-icons-react';
+import { createStyles, Container, Text, Button, Group, rem, Box, Title, Stack } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
-  wrapper: {
-    position: 'relative',
-    boxSizing: 'border-box',
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-    height: '100vh',
-  },
-
   inner: {
     position: 'relative',
     paddingTop: rem(200),
@@ -18,21 +9,6 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan('sm')]: {
       paddingBottom: rem(80),
       paddingTop: rem(80),
-    },
-  },
-
-  title: {
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontSize: rem(62),
-    fontWeight: 900,
-    lineHeight: 1.1,
-    margin: 0,
-    padding: 0,
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-
-    [theme.fn.smallerThan('sm')]: {
-      fontSize: rem(42),
-      lineHeight: 1.2,
     },
   },
 
@@ -69,41 +45,63 @@ const useStyles = createStyles((theme) => ({
 
 interface IProps {
   isDesktop: boolean;
+  scrollToForm: () => void;
 }
 
-const LandingCtaBlock = ({ isDesktop }: IProps) => {
+const LandingCtaBlock = ({ isDesktop, scrollToForm }: IProps) => {
   const { classes } = useStyles();
 
+  const getNextMonday = (date = new Date()) => {
+    const dateCopy = new Date(date.getTime());
+    const nextMonday = new Date(
+      dateCopy.setDate(
+        dateCopy.getDate() + ((7 - dateCopy.getDay() + 1) % 7 || 7),
+      ),
+    );
+    return nextMonday;
+  };
+
+  const deadline = getNextMonday();
+  const day = deadline.getDate().toString();
+  const month = (deadline.getMonth() + 1).toString();
+  const dateString = `${day.length === 1 ? `0${day}` : day}.${month.length === 1 ? `0${month}` : month}.${deadline.getFullYear()}`;
+
   return (
-    <div className={classes.wrapper}>
-      <Container size={700} className={classes.inner}>
-        <h1 className={classes.title}>
-          A{' '}
-          <Text component="span" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }} inherit>
-            fully featured
-          </Text>{' '}
-          React components and hooks library
-        </h1>
+    <Box bg='orange'>
+      <Container
+        size="sm"
+        py={160}
+        className={classes.inner}
+        h='100%'
+      >
+        <Stack align='center'>
+          <Title order={2} align='center' color="white" size={isDesktop ? 42 : 30}>
+            <>
+              Оставь заявку до {dateString} и получи{' '}
+              <Text component="span" variant="gradient" gradient={{ from: 'pink', to: 'violet' }} inherit>
+                проект в подарок
+              </Text>!
+            </>
+          </Title>
 
-        <Text className={classes.description} color="dimmed">
-          Build fully functional accessible web applications with ease – Mantine includes more than
-          100 customizable components and hooks to cover you in any situation
-        </Text>
+          <Text className={classes.description} color="white">
+            Мы свяжемся с вами в ближайшее время
+          </Text>
 
-        <Group className={classes.controls}>
-          {/* <Link href='/accounts'> */}
+          <Group className={classes.controls}>
             <Button
               size="xl"
               className={classes.control}
               variant="gradient"
-              gradient={{ from: 'blue', to: 'cyan' }}
+              gradient={{ from: 'cyan', to: 'teal' }}
+              onClick={scrollToForm}
             >
-              Get started
+              Оставить заявку сейчас
             </Button>
-          {/* </Link> */}
-        </Group>
+          </Group>
+        </Stack>
       </Container>
-    </div>
+    </Box>
   )
 };
 
