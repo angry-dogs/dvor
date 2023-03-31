@@ -37,9 +37,15 @@ export const SEO = {
   },
   additionalLinkTags: [
     {
+      rel: 'icon',
+      href: '/icons/favicon.ico',
+      type: 'image/x-icon',
+    },
+    {
       rel: 'apple-touch-icon',
       href: '/icons/apple-touch-icon.png',
       sizes: '180x180',
+      type: 'image/png',
     },
     {
       rel: 'icon',

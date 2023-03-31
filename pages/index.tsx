@@ -10,7 +10,8 @@ import LandingPortfolioBlock from 'components/pages/landing/portfolio';
 import LandingProcessBlock from 'components/pages/landing/process';
 import LandingReviewsBlock from 'components/pages/landing/reviews';
 import LandingServicesBlock from 'components/pages/landing/services';
-import { MutableRefObject } from 'react';
+import { useRouter } from 'next/router';
+import { MutableRefObject, useEffect } from 'react';
 
 interface IProps {
   scrollToServices: () => void;
@@ -36,6 +37,13 @@ const IndexPage = ({
 }: IProps) => {
   const theme = useMantineTheme();
   const isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.sm})`);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.isReady)  {
+      console.log(router);
+    }
+  }, [router, router.isReady]);
 
   return (
     <>
