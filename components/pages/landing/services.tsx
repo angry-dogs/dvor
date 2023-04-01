@@ -40,9 +40,12 @@ const LandingServicesBlock = ({ isDesktop, servicesRef }: IProps) => {
             <Card.Section>
               <Image src={Img1.src} alt='Брус' width='400' height='200' />
             </Card.Section>
-            <Title order={3} my='sm'>Брус</Title>
+            <Text size={20} weight='bold' my='sm'>Брус</Text>
             <Link href='/blog/dom-iz-brusa'>
-              <Button variant='outline' color='orange'>
+              <Button
+                variant="gradient"
+                gradient={{ from: 'blue', to: 'cyan' }}
+              >
                 Читать подробнее&nbsp;
                 <ArrowNarrowRight />
               </Button>
@@ -52,9 +55,12 @@ const LandingServicesBlock = ({ isDesktop, servicesRef }: IProps) => {
             <Card.Section>
               <Image src={Img2.src} alt='Брус' width='400' height='200' />
             </Card.Section>
-            <Title order={3} my='sm'>Оцилиндрованное бревно</Title>
+            <Text size={20} weight='bold' my='sm'>Оцилиндрованное бревно</Text>
             <Link href='/blog/dom-iz-ocilindrovannogo-brevna'>
-              <Button variant='outline' color='orange'>
+              <Button
+                variant="gradient"
+                gradient={{ from: 'blue', to: 'cyan' }}
+              >
                 Читать подробнее&nbsp;
                 <ArrowNarrowRight />
               </Button>
@@ -64,9 +70,12 @@ const LandingServicesBlock = ({ isDesktop, servicesRef }: IProps) => {
             <Card.Section>
               <Image src={Img3.src} alt='Брус' width='400' height='200' />
             </Card.Section>
-            <Title order={3} my='sm'>Бревно ручной рубки</Title>
+            <Text size={20} weight='bold' my='sm'>Бревно ручной рубки</Text>
             <Link href='/blog/dom-iz-brevna-ruchnoy-rubki'>
-              <Button variant='outline' color='orange'>
+              <Button
+                variant="gradient"
+                gradient={{ from: 'blue', to: 'cyan' }}
+              >
                 Читать подробнее&nbsp;
                 <ArrowNarrowRight />
               </Button>

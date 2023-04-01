@@ -62,6 +62,7 @@ const AppNavbar = ({
             opened={burgerOpened}
             onClick={burgerOpened ? burgerClose : burgerOpen}
             color='white'
+            aria-label='X'
           />
         </MediaQuery>
 
