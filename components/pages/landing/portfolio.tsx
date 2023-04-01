@@ -3,14 +3,14 @@ import { Box, Container, createStyles, Image, SimpleGrid, Stack, Text, useMantin
 import { useDisclosure } from "@mantine/hooks";
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
-import Img1 from 'public/img/portfolio/preview/1.jpg';
-import Img2 from 'public/img/portfolio/preview/2.jpg';
-import Img3 from 'public/img/portfolio/preview/3.jpg';
-import Img4 from 'public/img/portfolio/preview/4.jpg';
-import Img5 from 'public/img/portfolio/preview/5.jpg';
-import Img6 from 'public/img/portfolio/preview/6.jpg';
-import Img7 from 'public/img/portfolio/preview/7.jpg';
-import Img8 from 'public/img/portfolio/preview/8.jpg';
+import Img1 from 'public/img/portfolio/preview/1.webp';
+import Img2 from 'public/img/portfolio/preview/2.webp';
+import Img3 from 'public/img/portfolio/preview/3.webp';
+import Img4 from 'public/img/portfolio/preview/4.webp';
+import Img5 from 'public/img/portfolio/preview/5.webp';
+import Img6 from 'public/img/portfolio/preview/6.webp';
+import Img7 from 'public/img/portfolio/preview/7.webp';
+import Img8 from 'public/img/portfolio/preview/8.webp';
 
 const useStyles = createStyles(() => ({
   image: {
@@ -87,14 +87,14 @@ const LandingPortfolioBlock = ({ isDesktop, portfolioRef }: IProps) => {
         close={close}
         index={activeSlide}
         slides={[
-          { src: "/img/portfolio/original/1.jpeg" },
-          { src: "/img/portfolio/original/2.jpeg" },
-          { src: "/img/portfolio/original/3.jpeg" },
-          { src: "/img/portfolio/original/4.jpeg" },
-          { src: "/img/portfolio/original/5.jpeg" },
-          { src: "/img/portfolio/original/6.jpeg" },
-          { src: "/img/portfolio/original/7.jpeg" },
-          { src: "/img/portfolio/original/8.jpeg" },
+          { src: "/img/portfolio/original/1.webp" },
+          { src: "/img/portfolio/original/2.webp" },
+          { src: "/img/portfolio/original/3.webp" },
+          { src: "/img/portfolio/original/4.webp" },
+          { src: "/img/portfolio/original/5.webp" },
+          { src: "/img/portfolio/original/6.webp" },
+          { src: "/img/portfolio/original/7.webp" },
+          { src: "/img/portfolio/original/8.webp" },
         ]}
       />
     </>

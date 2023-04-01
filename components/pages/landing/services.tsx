@@ -1,11 +1,11 @@
 import { MutableRefObject } from 'react';
-import { Button, Card, Container, SimpleGrid, Stack, Text, Title, useMantineTheme } from '@mantine/core';
-import Image from 'next/image';
-import Img1 from 'public/img/services/bar.jpg';
-import Img2 from 'public/img/services/circle-log.jpg';
-import Img3 from 'public/img/services/manual-log.jpg';
-import { ArrowNarrowRight, ArrowRight } from 'tabler-icons-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { Button, Card, Container, SimpleGrid, Stack, Text, Title, useMantineTheme } from '@mantine/core';
+import { ArrowNarrowRight } from 'tabler-icons-react';
+import Img1 from 'public/img/services/bar.webp';
+import Img2 from 'public/img/services/circle-log.webp';
+import Img3 from 'public/img/services/manual-log.webp';
 
 interface IProps {
   isDesktop: boolean;

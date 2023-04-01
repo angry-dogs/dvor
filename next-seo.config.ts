@@ -28,7 +28,7 @@ export const SEO = {
     url: PublicDomain,
     images: [
       {
-        url: 'https://kedrovy-dvor.com/img/bg-1.jpg',
+        url: 'https://kedrovy-dvor.com/img/bg-1.webp',
         alt: 'Строительная компания «Кедровый двор»',
         width: 1200,
         height: 800,

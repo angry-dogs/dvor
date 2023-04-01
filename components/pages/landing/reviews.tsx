@@ -1,9 +1,9 @@
 import { MutableRefObject } from 'react';
 import { Box, Card, Container, Group, Stack, Text, Image } from '@mantine/core';
-import ImgVlad from 'public/img/reviews/vlad.png';
-import ImgMark from 'public/img/reviews/mark-sofia.png';
-import ImgJulia from 'public/img/reviews/julia.png';
-import ImgAmir from 'public/img/reviews/amir.png';
+import ImgVlad from 'public/img/reviews/vlad.webp';
+import ImgMark from 'public/img/reviews/mark-sofia.webp';
+import ImgJulia from 'public/img/reviews/julia.webp';
+import ImgAmir from 'public/img/reviews/amir.webp';
 
 interface IProps {
   isDesktop: boolean;

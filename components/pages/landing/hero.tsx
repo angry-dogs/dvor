@@ -18,7 +18,7 @@ const useStyles = createStyles((theme) => ({
       backgroundColor: '#000000',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      backgroundImage: '-webkit-linear-gradient(top, rgba(4,69,87,0.80), rgba(4,30,56,0.80)), url(/img/bg-1.jpg)',
+      backgroundImage: '-webkit-linear-gradient(top, rgba(4,69,87,0.80), rgba(4,30,56,0.80)), url(/img/bg-1.webp)',
       paddingTop: `calc(${theme.spacing.xl} * 3)`,
       paddingBottom: `calc(${theme.spacing.xl} * 3)`,
     }
