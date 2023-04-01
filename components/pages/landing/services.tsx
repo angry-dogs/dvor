@@ -40,7 +40,7 @@ const LandingServicesBlock = ({ isDesktop, servicesRef }: IProps) => {
             <Card.Section>
               <Image src={Img1.src} alt='Брус' width='400' height='200' />
             </Card.Section>
-            <Text size={20} weight='bold' my='sm'>Брус</Text>
+            <Text size={20} weight='bold' my='md'>Брус</Text>
             <Link href='/blog/dom-iz-brusa'>
               <Button
                 variant="gradient"
@@ -55,7 +55,7 @@ const LandingServicesBlock = ({ isDesktop, servicesRef }: IProps) => {
             <Card.Section>
               <Image src={Img2.src} alt='Брус' width='400' height='200' />
             </Card.Section>
-            <Text size={20} weight='bold' my='sm'>Оцилиндрованное бревно</Text>
+            <Text size={20} weight='bold' my='md'>Оцилиндрованное бревно</Text>
             <Link href='/blog/dom-iz-ocilindrovannogo-brevna'>
               <Button
                 variant="gradient"
@@ -70,7 +70,7 @@ const LandingServicesBlock = ({ isDesktop, servicesRef }: IProps) => {
             <Card.Section>
               <Image src={Img3.src} alt='Брус' width='400' height='200' />
             </Card.Section>
-            <Text size={20} weight='bold' my='sm'>Бревно ручной рубки</Text>
+            <Text size={20} weight='bold' my='md'>Бревно ручной рубки</Text>
             <Link href='/blog/dom-iz-brevna-ruchnoy-rubki'>
               <Button
                 variant="gradient"
