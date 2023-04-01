@@ -3,7 +3,11 @@ import BlogLayout from "components/shared/layout/blog";
 import { NextSeo } from "next-seo";
 import { PublicDomain } from "next-seo.config";
 
-const BlogPage1 = () => {
+interface IProps {
+  isDesktop: boolean;
+};
+
+const BlogPage = ({ isDesktop }: IProps) => {
   const seo = {
     title: 'Строительство дома из бруса',
     desc: 'Особенности строительства загородных домов из бруса в России и странах СНГ',
@@ -22,7 +26,7 @@ const BlogPage1 = () => {
           url: seo.url,
         }}
       />
-      <BlogLayout title='Строительство дома из бруса'>
+      <BlogLayout title='Строительство дома из бруса' isDesktop={isDesktop}>
         <>
           <Text size={18}>
             <p>
@@ -56,4 +60,4 @@ const BlogPage1 = () => {
   )
 };
 
-export default BlogPage1;
+export default BlogPage;

@@ -1,31 +1,33 @@
-import { Container, Text } from "@mantine/core"
-import Link from "next/link";
-import { ReactElement } from "react";
-import AppHeader from "../header"
+import { ReactElement } from 'react';
+import { Container, Text } from '@mantine/core'
+import Link from 'next/link';
+import AppHeader from '../header'
 
 interface IProps {
   children: ReactElement;
   title: string;
   hideBackLink?: boolean;
+  isDesktop: boolean;
 };
 
-const BlogLayout = ({ children, title, hideBackLink }: IProps) => {
+const BlogLayout = ({ children, title, hideBackLink, isDesktop }: IProps) => {
   return (
     <>
       <AppHeader title={
         <>
         {!hideBackLink && (
-          <Link href='/blog' className="link link-gray">
+          <Link href='/blog' className="link link-gray" style={{ display: 'block', marginTop: '10px' }}>
             Блог /
           </Link>
         )}
-          <Text size={40} lh={1.1}>{title}</Text>
+          <Text size={isDesktop ? 42 : 30} lh={1.1} mt={hideBackLink ? 0 : 10}>{title}</Text>
         </>
       } />
       <Container
         size="lg"
         mih='100vh'
-        py={100}
+        pt={60}
+        pb={100}
       >
         {children}
       </Container>

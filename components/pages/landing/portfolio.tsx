@@ -3,14 +3,14 @@ import { Box, Container, createStyles, Image, SimpleGrid, Stack, Text, useMantin
 import { useDisclosure } from "@mantine/hooks";
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
-import Img1 from '../../../public/img/portfolio/preview/1.jpg';
-import Img2 from '../../../public/img/portfolio/preview/2.jpg';
-import Img3 from '../../../public/img/portfolio/preview/3.jpg';
-import Img4 from '../../../public/img/portfolio/preview/4.jpg';
-import Img5 from '../../../public/img/portfolio/preview/5.jpg';
-import Img6 from '../../../public/img/portfolio/preview/6.jpg';
-import Img7 from '../../../public/img/portfolio/preview/7.jpg';
-import Img8 from '../../../public/img/portfolio/preview/8.jpg';
+import Img1 from 'public/img/portfolio/preview/1.jpg';
+import Img2 from 'public/img/portfolio/preview/2.jpg';
+import Img3 from 'public/img/portfolio/preview/3.jpg';
+import Img4 from 'public/img/portfolio/preview/4.jpg';
+import Img5 from 'public/img/portfolio/preview/5.jpg';
+import Img6 from 'public/img/portfolio/preview/6.jpg';
+import Img7 from 'public/img/portfolio/preview/7.jpg';
+import Img8 from 'public/img/portfolio/preview/8.jpg';
 
 const useStyles = createStyles(() => ({
   image: {

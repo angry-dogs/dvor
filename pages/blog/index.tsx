@@ -6,7 +6,11 @@ import { NextSeo } from "next-seo";
 import { PublicDomain } from "next-seo.config";
 import BlogLayout from "components/shared/layout/blog";
 
-const BlogIndexPage = () => {
+interface IProps {
+  isDesktop: boolean;
+};
+
+const BlogIndexPage = ({ isDesktop }: IProps) => {
   const seo = {
     title: 'Блог',
     desc: 'Блог строительной компании «Кедровый двор» расскажет об особенностях строительства домов из дерева в России и странах СНГ',
@@ -25,7 +29,7 @@ const BlogIndexPage = () => {
           url: seo.url,
         }}
       />
-      <BlogLayout title='Блог' hideBackLink>
+      <BlogLayout title='Блог' hideBackLink isDesktop={isDesktop}>
         <Stack spacing='xl'>
           {activeArticles.map((article: IArticle) => <BlogCard key={Math.random()} article={article} />)}
         </Stack>

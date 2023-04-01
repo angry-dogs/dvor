@@ -1,5 +1,11 @@
-import { MutableRefObject } from "react";
-import { Container, Stack, Text, useMantineTheme } from "@mantine/core";
+import { MutableRefObject } from 'react';
+import { Button, Card, Container, SimpleGrid, Stack, Text, Title, useMantineTheme } from '@mantine/core';
+import Image from 'next/image';
+import Img1 from 'public/img/services/bar.jpg';
+import Img2 from 'public/img/services/circle-log.jpg';
+import Img3 from 'public/img/services/manual-log.jpg';
+import { ArrowNarrowRight, ArrowRight } from 'tabler-icons-react';
+import Link from 'next/link';
 
 interface IProps {
   isDesktop: boolean;
@@ -22,8 +28,51 @@ const LandingServicesBlock = ({ isDesktop, servicesRef }: IProps) => {
         <Text size={isDesktop ? 20 : 14} align='center' px={isDesktop ? 80 : theme.spacing.md} mt='lg'>
           Мы выполняем проектирование и строительно-монтажные работы из бруса, оцилиндрованного бревна и бревна ручной рубки любой сложности
         </Text>
-        <Text>
-        </Text>
+        <SimpleGrid
+          cols={3}
+          my={60}
+          spacing="lg"
+          breakpoints={[
+            { maxWidth: theme.breakpoints.sm, cols: 1, spacing: 'sm' },
+          ]}
+        >
+          <Card withBorder shadow='sm'>
+            <Card.Section>
+              <Image src={Img1.src} alt='Брус' width='400' height='200' />
+            </Card.Section>
+            <Title order={3} my='sm'>Брус</Title>
+            <Link href='/blog/dom-iz-brusa'>
+              <Button variant='outline' color='orange'>
+                Читать подробнее&nbsp;
+                <ArrowNarrowRight />
+              </Button>
+            </Link>
+          </Card>
+          <Card withBorder shadow='sm'>
+            <Card.Section>
+              <Image src={Img2.src} alt='Брус' width='400' height='200' />
+            </Card.Section>
+            <Title order={3} my='sm'>Оцилиндрованное бревно</Title>
+            <Link href='/blog/dom-iz-ocilindrovannogo-brevna'>
+              <Button variant='outline' color='orange'>
+                Читать подробнее&nbsp;
+                <ArrowNarrowRight />
+              </Button>
+            </Link>
+          </Card>
+          <Card withBorder shadow='sm'>
+            <Card.Section>
+              <Image src={Img3.src} alt='Брус' width='400' height='200' />
+            </Card.Section>
+            <Title order={3} my='sm'>Бревно ручной рубки</Title>
+            <Link href='/blog/dom-iz-brevna-ruchnoy-rubki'>
+              <Button variant='outline' color='orange'>
+                Читать подробнее&nbsp;
+                <ArrowNarrowRight />
+              </Button>
+            </Link>
+          </Card>
+        </SimpleGrid>
       </Stack>
     </Container>
   )

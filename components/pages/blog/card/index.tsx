@@ -44,20 +44,22 @@ const BlogCard = ({ article }: IProps) => {
     <Link href={article.path} className={classes.link}>
       <Paper withBorder radius="md" className={classes.card}>
         <Group position='apart'>
-          <ThemeIcon
-            size="xl"
-            radius="md"
-            variant="gradient"
-            gradient={{ deg: 0, from: 'pink', to: 'orange' }}
-          >
-            <Article size={rem(28)} />
-          </ThemeIcon>
+          <Group>
+            <ThemeIcon
+              size="xl"
+              radius="md"
+              variant="gradient"
+              gradient={{ deg: 0, from: 'pink', to: 'orange' }}
+            >
+              <Article size={rem(28)} />
+            </ThemeIcon>
+            <Text size="xl" weight={500}>
+              {article.title}
+            </Text>
+          </Group>
           <Text color='gray' mr='sm'>{article.publishDate}</Text>
         </Group>
-        <Text size="xl" weight={500} mt="md">
-          {article.title}
-        </Text>
-        <Text size="sm" mt="sm" color="dimmed">
+        <Text size="sm" mt="md" color="dimmed">
           {article.previewDesc} ...
         </Text>
       </Paper>
