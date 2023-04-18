@@ -81,7 +81,7 @@ const LandingCtaBlock = ({ isDesktop, scrollToForm }: IProps) => {
               Оставь заявку до {dateString} и получи{' '}
               {/* <Text component="span" variant="gradient" gradient={{ from: 'pink', to: 'violet' }} inherit> */}
               <Text component="span" bg='black' color='yellow.1' inherit py={8} px={12}>
-                проект в подарок
+                проект в подарок*
               </Text>
             </>
           </Title>
@@ -102,6 +102,11 @@ const LandingCtaBlock = ({ isDesktop, scrollToForm }: IProps) => {
               Оставить заявку сейчас
             </Button>
           </Group>
+
+          <Text color='white'>
+            <Text size={30} display='inline' mr={8}>*</Text>
+            при общении, сообщите нашему сотруднику, что вы пришли с официального сайта.
+          </Text>
         </Stack>
       </Container>
     </Box>

@@ -3,6 +3,13 @@ import { IArticle } from 'interfaces';
 export const articles : IArticle[] = [
   {
     enabled: true,
+    title: 'Как подготовиться к строительству деревянного дома?',
+    path: '/blog/podgotovka-k-stroitelstvu-doma',
+    publishDate: '18.04.2023',
+    previewDesc: `Подготовка к строительству загородного деревянного дома может быть сложным процессом, который требует серьезной подготовки. Ниже перечислены несколько важных шагов, которые следует учесть при подготовке к строительству:`,
+  },
+  {
+    enabled: true,
     title: 'Строительство дома из бревна ручной рубки',
     path: '/blog/dom-iz-brevna-ruchnoy-rubki',
     publishDate: '01.04.2023',

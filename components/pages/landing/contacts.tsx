@@ -72,6 +72,27 @@ const LandingContactsBlock = ({ isDesktop, contactsRef }: IProps) => {
                 </Tooltip>
               </td>
             </tr>
+            <tr>
+              <td colSpan={2} style={{ borderTop: '0' }}>
+                <Text size={isDesktop ? 32 : 24} mt={20} weight={600} color='gray.5'>
+                  Москва и МО:
+                </Text>
+              </td>
+            </tr>
+            <tr>
+              <td style={{ borderTop: '0' }}>
+                <Anchor href='tel:+79164455644' size={isDesktop ? 32 : 24} weight={600} color='dark'>
+                  +7 (916) 445-56-44
+                </Anchor>
+              </td>
+              <td style={{ borderTop: '0', paddingLeft: '40px' }}>
+                <Tooltip label="Звонок" withArrow>
+                  <Box display='inline-block'>
+                    <PhoneCall color='green' />
+                  </Box>
+                </Tooltip>
+              </td>
+            </tr>
           </tbody>
         </Table>
       </Group>
