@@ -26,7 +26,7 @@ const LandingContactsBlock = ({ isDesktop, contactsRef }: IProps) => {
             <tr>
               <td>
                 <Anchor href='tel:+79029913632' size={isDesktop ? 32 : 24} weight={600} color='dark'>
-                  +7 (902) 991 36-32
+                  +7 (902) 991-36-32
                 </Anchor>
               </td>
               <td style={{ paddingLeft: '40px' }}>
@@ -40,7 +40,7 @@ const LandingContactsBlock = ({ isDesktop, contactsRef }: IProps) => {
             <tr>
               <td style={{ borderTop: '0' }}>
                 <Anchor href='https://api.whatsapp.com/send?phone=+79135673916' size={isDesktop ? 32 : 24} weight={600} color='dark'>
-                  +7 (913) 567 39-16
+                  +7 (913) 567-39-16
                 </Anchor>
               </td>
               <td style={{ borderTop: '0', paddingLeft: '40px' }}>
