@@ -88,7 +88,7 @@ const AppNavbar = ({
 
         <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
           <Stack spacing={0}>
-            <Anchor href='tel:+79029913632'>+7 (902) 991 36-32</Anchor>
+            <Anchor href='tel:+79029913632'>+7 (902) 991-36-32</Anchor>
             <Text>Пн-сб: 9:00 – 21:00</Text>
           </Stack>
         </MediaQuery>

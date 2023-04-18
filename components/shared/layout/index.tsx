@@ -73,7 +73,7 @@ const AppLayout = ({ children, isDesktop }: IProps) => {
                 Оставить заявку
               </Button>
               <Stack spacing={0} align='center'>
-                <Anchor href='tel:+79029913632' className='link'>+7 (902) 991 36-32</Anchor>
+                <Anchor href='tel:+79029913632' className='link'>+7 (902) 991-36-32</Anchor>
                 <Text color='white'>Пн-сб: 9:00 – 21:00</Text>
               </Stack>
             </Stack>
