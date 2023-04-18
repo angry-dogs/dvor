@@ -103,7 +103,7 @@ const LandingCtaBlock = ({ isDesktop, scrollToForm }: IProps) => {
             </Button>
           </Group>
 
-          <Text color='white' align='center' lh={1.7}>
+          <Text color='white' align='center' lh={1.4}>
             <Text size={30} display='inline' mr={8}>*</Text>
             при общении, сообщите нашему сотруднику, что вы пришли с официального сайта.
           </Text>
